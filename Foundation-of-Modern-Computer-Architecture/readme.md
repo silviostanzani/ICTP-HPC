@@ -78,5 +78,3 @@ time ./stride-test
 gcc -O3 stride-test2.c -o stride-test2
 time ./stride-test2 
 ```
-
-### Compare with perf

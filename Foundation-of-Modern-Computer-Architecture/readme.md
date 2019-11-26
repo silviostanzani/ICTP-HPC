@@ -50,3 +50,19 @@ time ./autovecivy
 time ./autovecavx2
 time ./autovecsky
 ```
+
+## Data Layout
+
+### AOS
+```
+gcc -O3 stride-test.c -o stride-test
+time ./stride-test 
+```
+
+### SOA
+```
+gcc -O3 stride-test2.c -o stride-test2
+time ./stride-test2 
+```
+
+### Compare with perf

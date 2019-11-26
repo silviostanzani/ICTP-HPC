@@ -11,7 +11,7 @@ gcc autoO3.c -o autoO3 -O3 --fopt-info-vec
 time ./autoO3
 ```
 
-# different instruction sets
+## Different Instruction Sets
 
 ```
 gcc -g -O3 -march=ivybridge autovec.c -o autovec -fopt-info-vec -S
@@ -40,6 +40,7 @@ cat autovec | grep xmm
 cat autovec | grep ymm
 cat autovec | grep zmm
 ```
+## Performance Comparison
 
 ```
 gcc -g -O3 -march=ivybridge autovec.c -o autovecivy

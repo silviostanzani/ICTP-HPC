@@ -40,6 +40,14 @@ cat autovec | grep xmm
 cat autovec | grep ymm
 cat autovec | grep zmm
 ```
+
+## Compiling to specific Vector Instruction Set
+```
+gcc -g -O3 -march=skylake-avx512 autovec.c -o autovec -fopt-info-vec
+./autovec
+Illegal instruction (core dumped)
+```
+
 ## Performance Comparison
 
 ```

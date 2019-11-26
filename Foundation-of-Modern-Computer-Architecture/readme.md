@@ -1,5 +1,11 @@
 # Foundation of Modern Computer Architecture 
 
+```
+lscpu
+htop
+lstopo
+```
+
 ## Optimization with O3
 
 ```

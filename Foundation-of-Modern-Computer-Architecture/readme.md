@@ -78,3 +78,8 @@ time ./stride-test
 gcc -O3 stride-test2.c -o stride-test2
 time ./stride-test2 
 ```
+## Guided vectorization #pragma ivdep
+```
+icc -c func.c -o func -qopt-report
+cat func.optrpt 
+```

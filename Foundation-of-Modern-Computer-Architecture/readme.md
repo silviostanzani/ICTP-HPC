@@ -13,7 +13,7 @@ gcc autoO3.c -o autoO3 -O0 -fopt-info-vec-missed
 time ./autoO3
 ```
 ```
-gcc autoO3.c -o autoO3 -O3 --fopt-info-vec
+gcc autoO3.c -o autoO3 -O3 -fopt-info-vec
 time ./autoO3
 ```
 

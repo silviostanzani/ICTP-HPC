@@ -18,6 +18,15 @@ export OMP_NUM_THREADS=3
 
 # Execution script
 
+```
+#!/bin/bash
+
+#SBATCH -c 8
+
+./exec.sh
+
+```
+
 # Function
 ```
 gcc OMP-hello-function.c -o OMP-hello-function -fopenmp

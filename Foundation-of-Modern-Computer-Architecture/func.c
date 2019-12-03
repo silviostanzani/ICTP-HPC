@@ -6,7 +6,7 @@ void quad(int length, double * a, double * b, double * c, double * x1, double * 
 {
   int i,j;
   for (j=1; j<length; j++){
-  //#pragma ivdep
+  #pragma ivdep
   for (i=0; i<length; i++) {
     float s = b[i]*b[i] - 4*a[i]*c[i];
       s = sqrt(s) ;

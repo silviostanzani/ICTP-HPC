@@ -17,11 +17,11 @@ unsigned long long fib(int n) {
 }
 
 int main(){
-  int n = 30;
-  int c = 0;
+  int n = 80;
+  int c = 1;
   #pragma omp parallel
   {
-    #pragma omp master
+    #pragma omp single
     {
       for (c = 1; c <= n; c++) {
         printf("%llu\n", fib(c));

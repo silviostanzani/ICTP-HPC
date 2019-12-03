@@ -4,7 +4,7 @@
 int main(){
 
   int nn, i;
-  nn = 100000000;
+  nn = 2000000000;
   double* a;
   double* b;
   double* c;

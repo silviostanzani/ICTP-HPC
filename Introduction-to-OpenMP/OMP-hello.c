@@ -3,7 +3,7 @@
 int main() {
 
     char hn[600];
-	
+
     #pragma omp parallel
     {
         gethostname(hn,600);

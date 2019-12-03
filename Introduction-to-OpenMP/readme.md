@@ -11,12 +11,8 @@ gcc OMP-hello.c -o OMP-hello
 
 ./OMP-hello
 
-# 2 los andes script
-cat jobs/job2
+# 2 Execution script
 
-qsub jobs/job2
-
-qstat
 
 # 3 Function
 

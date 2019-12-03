@@ -1,25 +1,3 @@
-# Matrix Multiplication
-
-This code is part of Intel Vtune Sample
-
-Parallelize the Matrix Multiplication function (multiply0) on "hands-on/matrix/src/multiply.c"
-
-You can change the matrix size using the definition "#define NUM 2048" at "sshpc-omp-course/hands-on/matrix/src/multiply.h" 
-
-Compare the execution of serial matrix multiplication against parallel version using NUM=512,1024 and 2048
-
-compilation:
-```
-cd hands-on/matrix/linux
-make clean 
-make gcc
-```
-
-Execution:
-```
-./matrix.gcc
-```
-
 # Matrix Transposition
 
 The following code was used in the book "lots of core" volume 1 - Chapter 24 (http://lotsofcores.com/)

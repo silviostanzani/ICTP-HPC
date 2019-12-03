@@ -3,6 +3,7 @@
 # 1 hello
 #without fopenmp
 
+```
 gcc OMP-hello.c -o OMP-helloOM -fopenmp
 
 ./OMP-helloOM
@@ -11,61 +12,84 @@ gcc OMP-hello.c -o OMP-hello
 
 ./OMP-hello
 
+export OMP_NUM_THREADS=3
+
+./OMP-hello
+```
+
 # 2 Execution script
 
-
 # 3 Function
-
-gcc /hpcfs/home/sshpc/OMPCourse/OMP-hello-function.c -o /hpcfs/home/sshpc/OMPCourse/OMP-hello-function -fopenmp
+```
+gcc OMP-hello-function.c -o OMP-hello-function -fopenmp
+OMP-hello-function./OMP-hello-function
+```
 
 # 4 Data Sharing Clauses
-
-gcc /hpcfs/home/sshpc/OMPCourse/OMP-hello-PR-variable.c -o /hpcfs/home/sshpc/OMPCourse/OMP-hello-PR-variable -fopenmp
+```
+OMP-hello-function
+gcc OMP-hello-PR-variable.c -o OMP-hello-PR-variable -fopenmp
+./OMP-hello-PR-variable
+```
 
 # 5 loop worksharing
-gcc /hpcfs/home/sshpc/OMPCourse/OMP-loop-WorkSharing.c -o /hpcfs/home/sshpc/OMPCourse/OMP-loop-WorkSharing -fopenmp
+```
+gcc OMP-loop-WorkSharing.c -o OMP-loop-WorkSharing -fopenmp
+```
 
 # 6 performance comparison
 
-Serial version:​
+Serial version:
 
-gcc OMP-matrix-sum.c -o OMP-matrix-sum​
+```
+gcc OMP-matrix-sum.c -o OMP-matrix-sum
 
-time ./OMP-matrix-sum ​
+time ./OMP-matrix-sum
+```
 
-Parallel version:​
+Parallel version:
 
-gcc OMP-matrix-sum.c -o OMP-matrix-sumOM -fopenmp​
+```
+gcc OMP-matrix-sum.c -o OMP-matrix-sumOM -fopenmp
 
-time ./OMP-matrix-sumOM ​
+time ./OMP-matrix-sumOM
+```
 
 # 7 race condition
 
+```
 gcc OMP-race.c -o OMP-race -fopenmp
-
-qsub jobs/job2
+./OMP-race
+```
 
 # 8 sycronization
 
-OMP-race.c
-  critical
-  atomic
-  ordered
+critical, atomic, ordered
+
+```
+gcc OMP-race.c -o OMP-race -fopenmp
+./OMP-race
+```
 
 # 9 sycronization
 
+```
 gcc OMP-sync.c -o OMP-sync -fopenmp
 
 ./OMP-sync
 
+```
 # 10 task
 
+```
 gcc OMP-task.c -o OMP-task
 
 ./OMP-task 
+```
 
 # 11 fibonacci
 
+```
 gcc fib-no-recursion.c -o fib-no-recursion
 
 ./fib-no-recursion
@@ -81,3 +105,4 @@ gcc fib-task.c -o fib-task
 gcc fib-task.c -o fib-taskOM -fopenmp
 
 ./fib-taskOM
+```

@@ -1,6 +1,5 @@
-# sshpc-omp-course
-
 # Hello World
+
 #without fopenmp
 
 ```

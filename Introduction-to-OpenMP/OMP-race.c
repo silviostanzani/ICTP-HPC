@@ -6,7 +6,7 @@ int main(){
     int snum, i, sum;
 
     sum = 0;
-    snum=10000;
+    snum=40000000;
     
     input = (int*) malloc (sizeof(int)*snum);
 
@@ -18,7 +18,14 @@ int main(){
     for(i=0;i<snum;i++)
     {
         int* tmpsum = input+i;
+                
+        //#pragma omp critical 
+        //{
+        //    sum += *tmpsum;
+        //}
+        #pragma omp atomic
         sum += *tmpsum;
+
     }
     printf("sum %d", sum);
 }

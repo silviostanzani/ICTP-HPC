@@ -1,6 +1,6 @@
 # sshpc-omp-course
 
-# 1 hello
+# 1 Hello World
 #without fopenmp
 
 ```
@@ -32,12 +32,12 @@ gcc OMP-hello-PR-variable.c -o OMP-hello-PR-variable -fopenmp
 ./OMP-hello-PR-variable
 ```
 
-# 5 loop worksharing
+# 5 Loop Worksharing
 ```
 gcc OMP-loop-WorkSharing.c -o OMP-loop-WorkSharing -fopenmp
 ```
 
-# 6 performance comparison
+# 6 Performance Comparison
 
 Serial version:
 
@@ -55,14 +55,14 @@ gcc OMP-matrix-sum.c -o OMP-matrix-sumOM -fopenmp
 time ./OMP-matrix-sumOM
 ```
 
-# 7 race condition
+# 7 Race condition
 
 ```
 gcc OMP-race.c -o OMP-race -fopenmp
 ./OMP-race
 ```
 
-# 8 sycronization
+# 8 Race condition - synchronization
 
 critical, atomic, ordered
 
@@ -71,7 +71,7 @@ gcc OMP-race.c -o OMP-race -fopenmp
 ./OMP-race
 ```
 
-# 9 sycronization
+# 9 Sycronization
 
 ```
 gcc OMP-sync.c -o OMP-sync -fopenmp
@@ -79,7 +79,7 @@ gcc OMP-sync.c -o OMP-sync -fopenmp
 ./OMP-sync
 
 ```
-# 10 task
+# 10 Task
 
 ```
 gcc OMP-task.c -o OMP-task
@@ -87,7 +87,7 @@ gcc OMP-task.c -o OMP-task
 ./OMP-task 
 ```
 
-# 11 fibonacci
+# 11 Fibonacci
 
 ```
 gcc fib-no-recursion.c -o fib-no-recursion

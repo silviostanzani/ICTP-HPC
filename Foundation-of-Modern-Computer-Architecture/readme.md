@@ -13,7 +13,7 @@ gcc autoO3.c -o autoO3 -O0 -fopt-info-vec-missed
 time ./autoO3
 ```
 ```
-gcc autoO3.c -o autoO3 -O3 --fopt-info-vec
+gcc autoO3.c -o autoO3 -O3 -fopt-info-vec
 time ./autoO3
 ```
 
@@ -77,4 +77,9 @@ time ./stride-test
 ```
 gcc -O3 stride-test2.c -o stride-test2
 time ./stride-test2 
+```
+## Guided vectorization #pragma ivdep
+```
+icc -c func.c -o func -qopt-report
+cat func.optrpt 
 ```

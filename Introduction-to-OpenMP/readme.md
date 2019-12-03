@@ -110,14 +110,6 @@ gcc OMP-task.c -o OMP-task
 # Fibonacci
 
 ```
-gcc fib-no-recursion.c -o fib-no-recursion
-
-./fib-no-recursion
-
-gcc fib-no-recursion.c -o fib-no-recursionOM -fopenmp
-
-./fib-no-recursionOM
-
 gcc fib-task.c -o fib-task 
 
 ./fib-task 

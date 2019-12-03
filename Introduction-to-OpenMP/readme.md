@@ -1,6 +1,6 @@
 # sshpc-omp-course
 
-# 1 Hello World
+# Hello World
 #without fopenmp
 
 ```
@@ -17,27 +17,39 @@ export OMP_NUM_THREADS=3
 ./OMP-hello
 ```
 
-# 2 Execution script
+# Execution script
 
-# 3 Function
+# Function
 ```
 gcc OMP-hello-function.c -o OMP-hello-function -fopenmp
 OMP-hello-function./OMP-hello-function
 ```
 
-# 4 Data Sharing Clauses
+# Thread Affinity
+```
+export OMP_NUM_THREADS=10
+export GOMP_CPU_AFFINITY=0-10
+./fib-taskOM
+
+export OMP_PROC_BIND=spread
+./fib-taskOM
+export OMP_PROC_BIND=close
+./fib-taskOM
+```
+
+# Data Sharing Clauses
 ```
 OMP-hello-function
 gcc OMP-hello-PR-variable.c -o OMP-hello-PR-variable -fopenmp
 ./OMP-hello-PR-variable
 ```
 
-# 5 Loop Worksharing
+# Loop Worksharing
 ```
 gcc OMP-loop-WorkSharing.c -o OMP-loop-WorkSharing -fopenmp
 ```
 
-# 6 Performance Comparison
+# Performance Comparison
 
 Serial version:
 
@@ -55,14 +67,14 @@ gcc OMP-matrix-sum.c -o OMP-matrix-sumOM -fopenmp
 time ./OMP-matrix-sumOM
 ```
 
-# 7 Race condition
+# Race condition
 
 ```
 gcc OMP-race.c -o OMP-race -fopenmp
 ./OMP-race
 ```
 
-# 8 Race condition - synchronization
+# Race condition - synchronization
 
 critical, atomic, ordered
 
@@ -71,7 +83,7 @@ gcc OMP-race.c -o OMP-race -fopenmp
 ./OMP-race
 ```
 
-# 9 Synchronization
+# Synchronization
 
 ```
 gcc OMP-sync.c -o OMP-sync -fopenmp
@@ -79,7 +91,7 @@ gcc OMP-sync.c -o OMP-sync -fopenmp
 ./OMP-sync
 
 ```
-# 10 Task
+# Task
 
 ```
 gcc OMP-task.c -o OMP-task
@@ -87,7 +99,7 @@ gcc OMP-task.c -o OMP-task
 ./OMP-task 
 ```
 
-# 11 Fibonacci
+# Fibonacci
 
 ```
 gcc fib-no-recursion.c -o fib-no-recursion

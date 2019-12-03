@@ -71,7 +71,7 @@ gcc OMP-race.c -o OMP-race -fopenmp
 ./OMP-race
 ```
 
-# 9 Sycronization
+# 9 Synchronization
 
 ```
 gcc OMP-sync.c -o OMP-sync -fopenmp

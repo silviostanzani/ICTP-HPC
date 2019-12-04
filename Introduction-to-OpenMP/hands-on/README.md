@@ -25,7 +25,7 @@ Example: ./runme-CPU 3000 100
 
 Parallelize this code using OpenMP.
 
-This code was used as warmup for Marathon of Parallel Programming at ERAD-SP 2018 (https://eradsp2018.lsc.ic.unicamp.br/desafio.html)
+This code was used as warmup for Marathon of Parallel Programming at ERAD-SP 2018 (http://lspd.mackenzie.br/marathon/18/warmup.pdf)
 
 compilation:
 ```

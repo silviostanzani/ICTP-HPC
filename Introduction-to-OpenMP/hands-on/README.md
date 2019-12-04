@@ -1,6 +1,6 @@
 # Matrix Transposition
 
-The following code was used in the book "lots of core" volume 1 - Chapter 24 (http://lotsofcores.com/)
+The following code was used in the book "lots of core" (http://lotsofcores.com/)
 
 Parallelize the Transposition function at "hands-on/Transposition/Transpose.cc"
 

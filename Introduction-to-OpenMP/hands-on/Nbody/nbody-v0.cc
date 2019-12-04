@@ -62,39 +62,35 @@ void cleanBodies() {
 // Function computing a time step of Newtonian interactions for our entire system
 void Newton( size_t n, real dt ) {
     const real dtG = dt * G;
-    
-    
-        
-        for ( size_t i = 0; i < n; ++i ) {
-            real dvx = 0, dvy = 0, dvz = 0;
-            
-            for ( size_t j = 0; j < i; ++j ) {
-                real dx = x[j] - x[i], dy = y[j] - y[i], dz = z[j] - z[i];
-                real dist2 = dx*dx + dy*dy + dz*dz;
-                real mOverDist3 = m[j] / (dist2 * Sqrt( dist2 ));
-                dvx += mOverDist3 * dx;
-                dvy += mOverDist3 * dy;
-                dvz += mOverDist3 * dz;
-            }
-            
-            for ( size_t j = i+1; j < n; ++j ) {
-                real dx = x[j] - x[i], dy = y[j] - y[i], dz = z[j] - z[i];
-                real dist2 = dx*dx + dy*dy + dz*dz;
-                real mOverDist3 = m[j] / (dist2 * Sqrt( dist2 ));
-                dvx += mOverDist3 * dx;
-                dvy += mOverDist3 * dy;
-                dvz += mOverDist3 * dz;
-            }
-            vx[i] += dvx * dtG;
-            vy[i] += dvy * dtG;
-            vz[i] += dvz * dtG;
+    for ( size_t i = 0; i < n; ++i ) {
+        real dvx = 0, dvy = 0, dvz = 0;
+        for ( size_t j = 0; j < i; ++j ) {
+            real dx = x[j] - x[i], dy = y[j] - y[i], dz = z[j] - z[i];
+            real dist2 = dx*dx + dy*dy + dz*dz
+            real mOverDist3 = m[j] / (dist2 * Sqrt( dist2 ));
+            dvx += mOverDist3 * dx;
+            dvy += mOverDist3 * dy;
+            dvz += mOverDist3 * dz;
         }
-        
-        for ( size_t i = 0; i < n; ++i ) {
-            x[i] += vx[i] * dt;
-            y[i] += vy[i] * dt;
-            z[i] += vz[i] * dt;
-        }    
+
+        for ( size_t j = i+1; j < n; ++j ) {
+            real dx = x[j] - x[i], dy = y[j] - y[i], dz = z[j] - z[i];
+            real dist2 = dx*dx + dy*dy + dz*dz;
+            real mOverDist3 = m[j] / (dist2 * Sqrt( dist2 ));
+            dvx += mOverDist3 * dx;
+            dvy += mOverDist3 * dy;
+            dvz += mOverDist3 * dz;
+        }
+        vx[i] += dvx * dtG;
+        vy[i] += dvy * dtG;
+        vz[i] += dvz * dtG;
+    }
+
+    for ( size_t i = 0; i < n; ++i ) {
+        x[i] += vx[i] * dt;
+        y[i] += vy[i] * dt;
+        z[i] += vz[i] * dt;
+    }
 }
 
 int main( int argc, char *argv[] ) {

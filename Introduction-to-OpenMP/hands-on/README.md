@@ -76,3 +76,25 @@ Execution:
 Parameter [size] is size of array
 
 Example: ./quicksort 20000000
+
+# Nbody
+
+The following code was used in the book "lots of core" (http://lotsofcores.com/)
+
+this code simulate particle interaction according to Newton's Law
+
+compilation:
+```
+g++ -O3 -fopenmp -ffast-math -march=native -mtune=native -o nbody-v0s nbody-v0.cc
+```
+
+execution:
+```
+./nbody-v0s
+```
+
+In order to change the size of problem go to line (101):
+```
+    // Number of particles (bodies) in our simulated "universe"
+    const size_t n = 50000;
+```

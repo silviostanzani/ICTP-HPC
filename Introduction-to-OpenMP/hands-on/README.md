@@ -1,6 +1,6 @@
 # Matrix Transposition
 
-The following code was used in the book "lots of core" (http://lotsofcores.com/)
+The following code was used in the book "lots of core"
 
 Parallelize the Transposition function at "hands-on/Transposition/Transpose.cc"
 
@@ -79,7 +79,7 @@ Example: ./quicksort 20000000
 
 # Nbody
 
-The following code was used in the book "lots of core" (http://lotsofcores.com/)
+The following code was used in the book "lots of core"
 
 this code simulate particle interaction according to Newton's Law
 
